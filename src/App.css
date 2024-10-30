@@ -1,0 +1,568 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FormStyles.css */
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-container input:focus {
+  border-color: #6a5acd; /* Violet blue on focus */
+  outline: none;
+}
+
+.form-container button {
+  padding: 10px;
+  background-color: #6a5acd; /* Violet blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #5b4fbc; /* Slightly darker on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .form-container {
+      padding: 15px;
+      width: 90%; /* Full width on small screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+      padding: 15px;
+  }
+}
+
+/* Navbar.css */
+.navbar {
+  background: linear-gradient(to right, white, #6a5acd);
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #333;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar-toggle {
+  display: none; /* Hide toggle button by default */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #333;
+  position: relative;
+}
+
+.toggle-icon:before,
+.toggle-icon:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.toggle-icon:before {
+  top: -8px;
+}
+
+.toggle-icon:after {
+  bottom: -8px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  transition: max-height 0.3s ease;
+}
+
+.navbar-links li {
+  margin: 0 15px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  color: #fff; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust based on navbar height */
+      left: 0;
+      right: 0;
+      background: white;
+      max-height: 0; /* Hide by default */
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+  }
+
+  .navbar-links.show {
+      max-height: 300px; /* Arbitrary value, adjust as needed */
+  }
+
+  .navbar-toggle {
+      display: block; /* Show toggle button on mobile */
+  }
+
+  .navbar-links li {
+      margin: 10px 0; /* Space between links on mobile */
+      text-align: center;
+  }
+}
+
+/* AdminPanelStyles.css */
+.admin-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #555;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-table th, .user-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #6a5acd; /* Violet blue */
+  color: white;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+.user-table tr:hover {
+  background-color: #e0e0e0; /* Highlight row on hover */
+}
+
+/* ApplyLeaveStyles.css */
+.apply-leave-container {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #6a5acd; /* Violet blue on focus */
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background-color: #6a5acd; /* Violet blue */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5b4fbc; /* Slightly darker on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .apply-leave-container {
+      width: 90%; /* Full width on small screens */
+      padding: 15px;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-container h1 {
+  margin-bottom: 20px;
+  color: #8A2BE2; /* Blue-violet */
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form input,
+.auth-form select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  border-color: #8A2BE2; /* Blue-violet */
+  outline: none;
+}
+
+.auth-form button {
+  padding: 10px;
+  background-color: #8A2BE2; /* Blue-violet */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.auth-form button:hover {
+  background-color: #7A1EAB; /* Slightly darker blue-violet on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .auth-container {
+      width: 90%; /* Full width on small screens */
+      padding: 15px;
+  }
+}
+
+
+.attendance-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.attendance-container h1 {
+  color: #8A2BE2; /* Blue-violet */
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.attendance-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #8A2BE2; /* Blue-violet */
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.attendance-button:hover:not(.disabled) {
+  background-color: #7A1EAB; /* Slightly darker blue-violet on hover */
+}
+
+.attendance-button.disabled {
+  background-color: #d3d3d3; /* Light gray for disabled button */
+  cursor: not-allowed;
+}
+
+.attendance-status {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* AdminPanel.css */
+
+.admin-container {
+  padding: 20px;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.user-table th, .user-table td {
+  padding: 15px; /* Add padding */
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #5c6bc0; /* Blue-violet */
+  color: white;
+}
+
+.attendance-list {
+  list-style-type: none; /* Remove dots */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.modal-content button {
+  margin-right: 10px; /* Add margin between buttons */
+  margin-bottom: 10px; /* Add margin below buttons */
+  padding: 10px 15px;
+  background-color: #5c6bc0; /* Blue-violet */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #3f51b5; /* Darker blue-violet */
+}
+
+.user-table button {
+  margin-right: 10px; /* Add margin between action buttons */
+  padding: 10px 15px;
+  background-color: #5c6bc0; /* Blue-violet */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-table button:hover {
+  background-color: #3f51b5; /* Darker blue-violet */
+}
+
+/* AdminPanel.css */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #5c6bc0; /* Change to your desired color */
+}
+
+.close-modal:hover {
+  color: #3f51b5; /* Darker shade on hover */
+}
+
+.user-details-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tables-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.user-info, .leave-requests {
+  flex: 1 1 45%; /* Allow each table to grow and shrink, with a minimum width of 45% */
+  margin: 10px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #dddddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .tables-container {
+      flex-direction: column; /* Stack tables vertically on smaller screens */
+  }
+}
+
+
